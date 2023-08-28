@@ -13,7 +13,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'default_key')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(' ')
-#ALLOWED_HOSTS = ['51.250.109.37', '127.0.0.1', 'localhost', 'fyurikitty.ddns.net']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -99,7 +98,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'collected_backend'
+STATIC_ROOT = BASE_DIR / 'collected_static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
