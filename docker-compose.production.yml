@@ -13,7 +13,7 @@ services:
       - pg_kdata:/var/lib/postgresql/data
 
   backend:
-    build: fyuriko/k_backend
+    build: fyuriko/kittygram_backend
     env_file: .env
     volumes:
       - static:/backend_static
@@ -23,13 +23,13 @@ services:
 
   frontend:
     env_file: .env
-    build: fyuriko/k_frontend
+    build: fyuriko/kittygram_frontend
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static
 
   gateway:
-    build: fyuriko/k_gateway
+    build: fyuriko/kittygram_gateway
     env_file: .env
     ports:
       - 9000:80
